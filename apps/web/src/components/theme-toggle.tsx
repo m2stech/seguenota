@@ -43,7 +43,7 @@ export function ThemeToggle() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         {OPTIONS.map(({ value, label, icon: Icon }) => (
-          <DropdownMenuItem key={value} onSelect={() => setTheme(value)}>
+          <DropdownMenuItem key={value} onClick={() => setTheme(value)}>
             <Icon />
             {label}
             {theme === value && <span className="ml-auto text-xs text-muted-foreground">Atual</span>}
