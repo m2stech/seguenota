@@ -62,13 +62,13 @@ Referências: [docs/PRD.md](docs/PRD.md) (o quê) e [CLAUDE.md](CLAUDE.md) (como
 **Objetivo:** construir as telas de RF-01 (autenticação) e RF-14 (onboarding) com fluxo completo navegável, usando estado local/mock — sem Supabase Auth real ainda.
 
 **Entregas:**
-- [ ] Telas: cadastro, login, confirmação de e-mail, recuperação de senha
-- [ ] Tela de convite de usuário (aceite + definição de senha)
-- [ ] Tela de configuração de 2FA (TOTP) — fluxo visual completo
-- [ ] Tela de gestão de sessões ativas (listar, revogar, "encerrar todas")
-- [ ] Fluxo de onboarding guiado (RF-14): criar organização → baixar/instalar agente → ativar com código → revisar certificados detectados → cadastrar empresas → escolher competência inicial → iniciar sincronização — todas as etapas navegáveis com dados mockados e indicador de progresso
-- [ ] Validações de formulário (Zod no client) com mensagens em pt-BR
-- [ ] Testes de componente (Vitest) para os formulários principais
+- [x] Telas: cadastro, login, confirmação de e-mail, recuperação de senha
+- [x] Tela de convite de usuário (aceite + definição de senha)
+- [x] Tela de configuração de 2FA (TOTP) — fluxo visual completo
+- [x] Tela de gestão de sessões ativas (listar, revogar, "encerrar todas")
+- [x] Fluxo de onboarding guiado (RF-14): criar organização → baixar/instalar agente → ativar com código → revisar certificados detectados → cadastrar empresas → escolher competência inicial → iniciar sincronização — todas as etapas navegáveis com dados mockados e indicador de progresso
+- [x] Validações de formulário (Zod no client) com mensagens em pt-BR
+- [x] Testes de componente (Vitest) para os formulários principais
 
 **Commit final:** `feat(ui): telas de autenticação e onboarding com dados mockados`
 
