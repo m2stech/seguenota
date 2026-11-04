@@ -17,18 +17,18 @@ Referências: [docs/PRD.md](docs/PRD.md) (o quê) e [CLAUDE.md](CLAUDE.md) (como
 **Objetivo:** preparar o monorepo, ferramentas e acessos necessários para começar a desenvolver, sem nenhuma funcionalidade de produto ainda.
 
 **Entregas:**
-- [ ] Inicializar monorepo com `apps/web`, `apps/agent`, `packages/shared`, `supabase/` (estrutura do CLAUDE.md)
-- [ ] Scaffold do Next.js (App Router, TypeScript strict) em `apps/web`
-- [ ] Configurar Tailwind CSS + shadcn/ui (tokens CSS, light/dark) em `apps/web`
-- [ ] Configurar ESLint, Prettier, tsconfig compartilhado
-- [ ] Configurar Vitest (unidade) e Playwright (e2e) em `apps/web`
-- [ ] Criar projeto Supabase novo (separado do legado) e vincular localmente (Supabase CLI)
-- [ ] Criar `.env.example` com todas as variáveis conhecidas (Supabase, `NEXT_PUBLIC_SITE_URL`, etc.) — nunca segredos reais versionados
-- [ ] Criar projeto Vercel e linkar o repositório (`vercel link`)
-- [ ] Scaffold inicial do projeto .NET 10 em `apps/agent` (console/worker vazio, só para validar o SDK)
-- [ ] `packages/shared`: esqueleto para DTOs/contratos compartilhados (ainda vazio ou com placeholder)
-- [ ] README raiz com instruções de setup local (como subir `apps/web`, rodar Supabase local, etc.)
-- [ ] CI básico (lint + typecheck + testes unitários) — GitHub Actions ou equivalente
+- [x] Inicializar monorepo com `apps/web`, `apps/agent`, `packages/shared`, `supabase/` (estrutura do CLAUDE.md)
+- [x] Scaffold do Next.js (App Router, TypeScript strict) em `apps/web`
+- [x] Configurar Tailwind CSS + shadcn/ui (tokens CSS, light/dark) em `apps/web`
+- [x] Configurar ESLint, Prettier, tsconfig compartilhado
+- [x] Configurar Vitest (unidade) e Playwright (e2e) em `apps/web`
+- [x] Criar projeto Supabase novo (separado do legado) e vincular localmente (Supabase CLI)
+- [x] Criar `.env.example` com todas as variáveis conhecidas (Supabase, `NEXT_PUBLIC_SITE_URL`, etc.) — nunca segredos reais versionados
+- [x] Criar projeto Vercel e linkar o repositório (`vercel link`)
+- [x] Scaffold inicial do projeto .NET 10 em `apps/agent` (console/worker vazio, só para validar o SDK)
+- [x] `packages/shared`: esqueleto para DTOs/contratos compartilhados (ainda vazio ou com placeholder)
+- [x] README raiz com instruções de setup local (como subir `apps/web`, rodar Supabase local, etc.)
+- [x] CI básico (lint + typecheck + testes unitários) — GitHub Actions ou equivalente
 
 **Commit final:** `chore(setup): inicializa monorepo, Next.js, Supabase e tooling base`
 
