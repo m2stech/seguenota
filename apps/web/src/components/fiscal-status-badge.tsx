@@ -6,6 +6,7 @@ import {
   ShieldAlert,
   type LucideIcon,
 } from "lucide-react";
+import { StatusBadge } from "@/components/status-badge";
 import { cn } from "cn";
 
 export type FiscalStatus =
@@ -53,18 +54,7 @@ export function FiscalStatusBadge({
   status: FiscalStatus;
   className?: string;
 }) {
-  const { label, icon: Icon, className: statusClassName } = STATUS_CONFIG[status];
+  const { label, icon, className: statusClassName } = STATUS_CONFIG[status];
 
-  return (
-    <span
-      className={cn(
-        "inline-flex items-center gap-1.5 rounded-full px-2 py-0.5 text-xs font-medium",
-        statusClassName,
-        className
-      )}
-    >
-      <Icon className="size-3.5" aria-hidden="true" />
-      {label}
-    </span>
-  );
+  return <StatusBadge label={label} icon={icon} className={cn(statusClassName, className)} />;
 }

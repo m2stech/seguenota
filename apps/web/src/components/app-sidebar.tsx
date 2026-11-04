@@ -3,15 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
-  LayoutDashboard,
-  FileText,
-  CalendarRange,
-  Building2,
-  Bell,
-  Settings,
-  Palette,
-} from "lucide-react";
-import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
@@ -23,19 +14,11 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
+import { MAIN_NAVIGATION, SECONDARY_NAVIGATION } from "@/lib/navigation";
 
-const MAIN_NAVIGATION = [
-  { label: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
-  { label: "Documentos fiscais", href: "/documentos", icon: FileText },
-  { label: "Competências", href: "/competencias", icon: CalendarRange },
-  { label: "Empresas e agentes", href: "/empresas", icon: Building2 },
-  { label: "Notificações", href: "/notificacoes", icon: Bell },
-];
-
-const SECONDARY_NAVIGATION = [
-  { label: "Configurações", href: "/configuracoes", icon: Settings },
-  { label: "Showcase de UI", href: "/dev/ui", icon: Palette },
-];
+function isActiveRoute(pathname: string, href: string) {
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
 
 export function AppSidebar() {
   const pathname = usePathname();
@@ -61,7 +44,7 @@ export function AppSidebar() {
                 <SidebarMenuItem key={item.href}>
                   <SidebarMenuButton
                     render={<Link href={item.href} />}
-                    isActive={pathname.startsWith(item.href)}
+                    isActive={isActiveRoute(pathname, item.href)}
                     tooltip={item.label}
                   >
                     <item.icon />
@@ -79,7 +62,7 @@ export function AppSidebar() {
             <SidebarMenuItem key={item.href}>
               <SidebarMenuButton
                 render={<Link href={item.href} />}
-                isActive={pathname.startsWith(item.href)}
+                isActive={isActiveRoute(pathname, item.href)}
                 tooltip={item.label}
               >
                 <item.icon />

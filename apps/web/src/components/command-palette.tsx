@@ -3,14 +3,6 @@
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import {
-  LayoutDashboard,
-  FileText,
-  CalendarRange,
-  Building2,
-  Bell,
-  Palette,
-} from "lucide-react";
-import {
   Command,
   CommandDialog,
   CommandEmpty,
@@ -21,15 +13,9 @@ import {
   CommandSeparator,
 } from "@/components/ui/command";
 import { useTheme } from "next-themes";
+import { MAIN_NAVIGATION, SECONDARY_NAVIGATION } from "@/lib/navigation";
 
-const NAVIGATION = [
-  { label: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
-  { label: "Documentos fiscais", href: "/documentos", icon: FileText },
-  { label: "Competências", href: "/competencias", icon: CalendarRange },
-  { label: "Empresas e agentes", href: "/empresas", icon: Building2 },
-  { label: "Notificações", href: "/notificacoes", icon: Bell },
-  { label: "Showcase de UI", href: "/dev/ui", icon: Palette },
-];
+const NAVIGATION = [...MAIN_NAVIGATION, ...SECONDARY_NAVIGATION];
 
 const CommandPaletteContext = createContext<{ open: () => void } | null>(null);
 

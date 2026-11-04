@@ -7,6 +7,6 @@ describe("Home", () => {
   it("redireciona para o dashboard", async () => {
     const { default: Home } = await import("./page");
     Home();
-    expect(redirectMock).toHaveBeenCalledWith("/dashboard");
+    expect(redirectMock).toHaveBeenCalledExactlyOnceWith("/dashboard");
   });
 });
