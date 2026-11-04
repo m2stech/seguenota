@@ -1,10 +1,12 @@
-import { render, screen } from "@testing-library/react";
-import { describe, expect, it } from "vitest";
-import Home from "./page";
+import { describe, expect, it, vi } from "vitest";
+
+const redirectMock = vi.fn();
+vi.mock("next/navigation", () => ({ redirect: redirectMock }));
 
 describe("Home", () => {
-  it("renderiza sem quebrar", () => {
-    render(<Home />);
-    expect(screen.getByRole("link", { name: /documentation/i })).toBeInTheDocument();
+  it("redireciona para o dashboard", async () => {
+    const { default: Home } = await import("./page");
+    Home();
+    expect(redirectMock).toHaveBeenCalledWith("/dashboard");
   });
 });

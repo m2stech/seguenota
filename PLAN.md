@@ -41,15 +41,15 @@ Referências: [docs/PRD.md](docs/PRD.md) (o quê) e [CLAUDE.md](CLAUDE.md) (como
 **Objetivo:** estabelecer a identidade visual (PRD §16) e o shell de navegação que todas as telas futuras vão usar, sem nenhuma lógica de negócio ainda.
 
 **Entregas:**
-- [ ] Tokens de cor (paleta neutra + índigo/violeta de destaque), tipografia e espaçamento configuráveis sem refatoração (pendência P13 — deixar fácil trocar depois)
-- [ ] Tema light/dark persistido (preferência do usuário, com opção "seguir sistema")
-- [ ] Layout shell: menu lateral recolhível, seletor de organização/empresa/competência (placeholders funcionais, sem dados reais ainda)
-- [ ] Paleta de comandos (⌘K / Ctrl+K) com ações básicas de navegação
-- [ ] Componentes base shadcn/ui instalados e customizados (botão, input, select, dialog, tabela, toast, badge de status)
-- [ ] Estados padrão: carregamento (skeleton), vazio, erro — componentes reutilizáveis
-- [ ] Cores semânticas (sucesso, atenção, erro, cancelada, substituída, extemporânea) sempre com texto/ícone, nunca só cor
-- [ ] Página de storybook/showcase interna (`/dev/ui`) para revisar todos os componentes e estados juntos
-- [ ] Checagem de acessibilidade básica (contraste, foco visível, navegação por teclado) nos componentes base
+- [x] Tokens de cor (paleta neutra + índigo/violeta de destaque), tipografia e espaçamento configuráveis sem refatoração (pendência P13 — deixar fácil trocar depois)
+- [x] Tema light/dark persistido (preferência do usuário, com opção "seguir sistema")
+- [x] Layout shell: menu lateral recolhível, seletor de organização/empresa/competência (placeholders funcionais, sem dados reais ainda)
+- [x] Paleta de comandos (⌘K / Ctrl+K) com ações básicas de navegação
+- [x] Componentes base shadcn/ui instalados e customizados (botão, input, select, dialog, tabela, toast, badge de status)
+- [x] Estados padrão: carregamento (skeleton), vazio, erro — componentes reutilizáveis
+- [x] Cores semânticas (sucesso, atenção, erro, cancelada, substituída, extemporânea) sempre com texto/ícone, nunca só cor
+- [x] Página de storybook/showcase interna (`/dev/ui`) para revisar todos os componentes e estados juntos
+- [x] Checagem de acessibilidade básica (contraste, foco visível, navegação por teclado) nos componentes base
 
 **Commit final:** `feat(ui): design system, tema light/dark e shell de navegação`
 
