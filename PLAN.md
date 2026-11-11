@@ -81,14 +81,14 @@ Referências: [docs/PRD.md](docs/PRD.md) (o quê) e [CLAUDE.md](CLAUDE.md) (como
 **Objetivo:** construir a gestão de organizações/empresas/agentes/certificados (RF-02, RF-03) e perfis de usuário (seção 5), com dados mockados.
 
 **Entregas:**
-- [ ] Seletor de organização (multi-org por usuário — D12) com troca de contexto
-- [ ] Tela de cadastro de empresa por CNPJ (validação de dígitos verificadores no client)
-- [ ] Estados visuais da empresa: `pendente_vinculo` → `ativa` → `desativada` (com reativação)
-- [ ] Tela de gestão de agentes: listar, gerar código de ativação, revogar
-- [ ] Tela de certificados detectados por agente (metadados: thumbprint, CNPJ titular, emissor, validade) e vínculo com empresa, incluindo os estados válido/vencendo/vencido/indisponível
-- [ ] UI das regras de negócio como validação visual (feedback imediato, mesmo mockado): um certificado por CNPJ, um agente por CNPJ, recusa quando CNPJ do certificado ≠ CNPJ da empresa
-- [ ] Tela de gestão de usuários e permissões por organização/empresa (perfis: Admin Organização, Operador Fiscal, Usuário de Consulta)
-- [ ] Testes de componente para as validações de vínculo
+- [x] Seletor de organização (multi-org por usuário — D12) com troca de contexto
+- [x] Tela de cadastro de empresa por CNPJ (validação de dígitos verificadores no client)
+- [x] Estados visuais da empresa: `pendente_vinculo` → `ativa` → `desativada` (com reativação)
+- [x] Tela de gestão de agentes: listar, gerar código de ativação, revogar
+- [x] Tela de certificados detectados por agente (metadados: thumbprint, CNPJ titular, emissor, validade) e vínculo com empresa, incluindo os estados válido/vencendo/vencido/indisponível
+- [x] UI das regras de negócio como validação visual (feedback imediato, mesmo mockado): um certificado por CNPJ, um agente por CNPJ, recusa quando CNPJ do certificado ≠ CNPJ da empresa
+- [x] Tela de gestão de usuários e permissões por organização/empresa (perfis: Admin Organização, Operador Fiscal, Usuário de Consulta)
+- [x] Testes de componente para as validações de vínculo
 
 **Commit final:** `feat(ui): telas de organizações, empresas, agentes e certificados com dados mockados`
 

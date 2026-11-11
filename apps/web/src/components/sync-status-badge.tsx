@@ -1,8 +1,8 @@
-import { Wifi, WifiOff, AlertTriangle, type LucideIcon } from "lucide-react";
+import { Wifi, WifiOff, AlertTriangle, HelpCircle, type LucideIcon } from "lucide-react";
 import { StatusBadge } from "@/components/status-badge";
 import { cn } from "cn";
 
-export type SyncStatus = "online" | "offline" | "erro";
+export type SyncStatus = "online" | "offline" | "erro" | "nunca_conectado";
 
 const STATUS_CONFIG: Record<
   SyncStatus,
@@ -22,6 +22,11 @@ const STATUS_CONFIG: Record<
     label: "Erro de sincronização",
     icon: AlertTriangle,
     className: "bg-sync-error/10 text-sync-error dark:bg-sync-error/15",
+  },
+  nunca_conectado: {
+    label: "Nunca conectado",
+    icon: HelpCircle,
+    className: "bg-muted text-muted-foreground",
   },
 };
 
